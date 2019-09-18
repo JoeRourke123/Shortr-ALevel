@@ -1,0 +1,50 @@
+<div class="page no-navbar no-toolbar no-swipeback">
+  <div class="page-content login-screen-content">
+    <div class="login-screen-title"><img src="../static/images/logo.png" style="width: 50vh;" /></div>
+    <form id="signUpForm" method="POST" action="#">
+      <div class="list">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Username</div>
+              <div class="item-input">
+                <input type="text" name="username" placeholder="Your username">
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Password</div>
+              <div class="item-input">
+                <input id="password" type="password" name="password" placeholder="Your password">
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Confirm Password</div>
+              <div class="item-input">
+                <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Password confirmation">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+          <li>
+            <div class="row">
+              <div class="col"></div>
+              <input type="submit" name="submit" class="col button button-raised button-fill" value="Sign up"/>
+              <div class="col"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="block-footer">
+          <p>If you already have an account, and wish to sign in, click below.</p>
+          <p><a href="/signin/" class="button">Sign in</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

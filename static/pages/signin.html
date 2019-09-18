@@ -1,0 +1,60 @@
+<div class="page no-navbar no-toolbar no-swipeback">
+  <div class="page-content login-screen-content">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-8">
+        <div class="block">
+          <img src="../static/images/logo.png" style="width: 50vh;"/>
+        </div>
+        <div class="row">
+          <div class="g-signin2" data-onsuccess="onGoogle" data-theme="dark" style="display: none;"></div>
+          <div class="col block">
+            <p class="segmented segmented-raised">
+              <a class="button color-red external" style="background: #ff3b30; color:white;"  onclick="$('.abcRioButton').click()" href="#">Google</a>
+              <a class="button color-blue external" style="background: #5ac8fa; color:white;" href="/api/twittersignin/">Twitter</a>
+              <a class="button color-blue external" style="background: #2196f3; color:white;"   href="/api/fbsignin/">Facebook</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <form id="signInForm" method="POST" action="#">
+      <div class="list">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Username</div>
+              <div class="item-input">
+                <input type="text" name="username" placeholder="Your username" required />
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">Password</div>
+              <div class="item-input">
+                <input type="password" name="password" placeholder="Your password" required />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <ul>
+          <li>
+            <div class="row">
+              <div class="col"></div>
+              <input type="submit" name="submit" class="col button button-raised button-fill" value="Sign in" />
+              <div class="col"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="block-footer">
+          <p>Don't have an account? To create one click the link below.</p>
+          <p><a href="/signup/" class="button">Sign up</a></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="popover">
+  <div class="block">
+    <div class="list">
+      <ul>
+        {% if $route.params['toAdjust'] == "interests" %}
+          {% for interest in js 'return Object.keys($root.user.preferences['interests']).filter(x => $root.user.preferences.interests[x] > 2)' %}
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">{{ interest }}: <span id="{{ interest }}-count"></span></div>
+                <div class="item-after">
+                  <div class="stepper stepper-init stepper-small stepper-raised" data-value="{{ $root.user.preferences['interests'][interest] }}" data-value-el="#{{ interest }}-count">
+                    <div class="stepper-button-minus"></div>
+                    <div class="stepper-button-plus"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        {% else %}
+          <h2>Hello</h2>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="fab fab-right-bottom color-blue">
+      <a href="#" id="commit">
+        <i class="icon material-icons">done</i>
+      </a>
+    </div>
+  </div>
+</div>

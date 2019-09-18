@@ -1,0 +1,72 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back" onclick="app.view.router.clearPreviousHistory()">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+      <div id="article-{{ $route.params['index'] }}-title" class="title"></div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="block block-strong" id="article-{{ $route.params['index'] }}-keywords">
+      <div class="chip">
+        <div class="chip-label" id="article-{{ $route.params['index'] }}-date"></div>
+      </div>
+    </div>
+    <div class="block inset">
+      <div class="row">
+        <div class="col-0 desktop-20"></div>
+        <div class="col-100 desktop-60">
+          <p id="article-{{ $route.params['index'] }}-sumcontent"></p>
+          <p id="article-{{ $route.params['index'] }}-content"></p>
+        </div>
+        <div class="col-0 desktop-20"></div>
+      </div>
+    </div>
+    <div class="fab fab-right-bottom" style="position:fixed;">
+      <a href="#">
+        <!-- First icon is visible when Speed Dial actions are closed -->
+        <i class="icon material-icons">more_horiz</i>
+        <!-- Second icon is visible when Speed Dial actions are opened -->
+        <i class="icon material-icons">close</i>
+      </a>
+      <div class="fab-buttons fab-buttons-top">
+        <a href="#" id="show-{{ $route.params['index'] }}-content" onclick="toggleContent({{ $route.params['index'] }})" class="fab-label-button fab-close color-green">
+          <span><i class="icon material-icons">sort</i></span>
+          <span class="fab-label">Full Article</span>
+        </a>
+        <a href="#" id="show-{{ $route.params['index'] }}-sumcontent" onclick="toggleContent({{ $route.params['index'] }})" class="fab-label-button fab-close color-green">
+          <span><i class="icon material-icons">short_text</i></span>
+          <span class="fab-label">Summarise</span>
+        </a>
+        <a href="#" id="blacklistSource" onclick="app.data.user.blacklist({{ $route.params['index'] }})" class="fab-label-button fab-close color-red">
+          <span><i class="icon material-icons">cancel</i></span>
+          <span class="fab-label">Blacklist Source</span>
+        </a>
+        <a href="#" id="share-{{ $route.params['index'] }}-twitter" target="_blank" class="fab-label-button fab-close color-blue external" style="background: #5ac8fa;">
+          <span><i class="icon material-icons">share</i></span>
+          <span class="fab-label">Twitter</span>
+        </a>
+        <a href="#" id="share-{{ $route.params['index'] }}-facebook" target="_blank" class="fab-label-button fab-close color-blue external">
+          <span><i class="icon material-icons">share</i></span>
+          <span class="fab-label">Facebook</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="block-title">Similar Articles...</div>
+    <div class="block block-strong">
+      <div class="row">
+        <div class="col-100 desktop-33 tablet-33" id="similar-{{ $route.params['index'] }}-article-1">
+        </div>
+        <div class="col-100 desktop-33 tablet-33" id="similar-{{ $route.params['index'] }}-article-2">
+        </div>
+        <div class="col-100 desktop-33 tablet-33" id="similar-{{ $route.params['index'] }}-article-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
