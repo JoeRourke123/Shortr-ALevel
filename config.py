@@ -1,0 +1,6 @@
+PROJECT_ID = "shortr-news"
+DATA_BACKEND = "cloudsql"
+CLOUDSQL_USER = "joeadmin"
+CLOUDSQL_PASSWORD = "TTf2vrs11!"
+CLOUDSQL_DATABASE = "ShortrNews"
+CLOUDSQL_CONNECTION_NAME = "shortr-news:europe-west2:shortr-news"

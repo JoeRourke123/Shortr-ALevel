@@ -1,0 +1,23 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+instance_class: F1
+
+handlers:
+- url: /static
+  secure: always
+  static_dir: static
+- url: /.*
+  secure: always
+  script: main.app
+
+libraries:
+- name: ssl
+  version: latest
+- name: MySQLdb
+  version: "latest"
+
+env_variables:
+    CLOUDSQL_CONNECTION_NAME: shortr-news:europe-west2:shortr-news
+    CLOUDSQL_USER: joeadmin
+    CLOUDSQL_PASSWORD: TTf2vrs11!
